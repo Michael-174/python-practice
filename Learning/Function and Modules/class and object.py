@@ -26,3 +26,5 @@ del p1.age
 print(p1)
 
 p1.myfunc()
+
+
