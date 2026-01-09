@@ -22,6 +22,7 @@
 # print(b)
 # nigga =list(a[:5])
 # print(nigga)
+import string
 
 a = [x*x for x in range(1,100) if x % 2 == 0]
 print(a)
@@ -31,5 +32,11 @@ print(b)
 c = {"a":1, "b":2, "c":3, "d":4, "e":5}
 c = [f"{x} = {y}"for x,y in c.items()]
 print(c)
+
+letter = list(string.ascii_uppercase)
+print(letter)
+letter = [s.lower() for s in letter]
+print(letter)
+
 
 
