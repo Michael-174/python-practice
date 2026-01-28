@@ -11,6 +11,7 @@ def fact_iter(num, product):
         return product
     return fact_iter(num - 1, num * product)
 # 尾递归，reduce stack overflow but not optimized in python
+#尾递归是指，在函数返回的时候，调用自身本身，并且，return语句不能包含表达式。
 
 print(fact(5))
 
