@@ -5,13 +5,13 @@ from functools import reduce
 #     return x**2
 
 # test = [1,2,3,4,5,6,7,8,9,10]
-# a = map(f, test)
+# a = map, reduce and filter(f, test)
 # print(a) #只能显示a的object
 # a = list(a)
 # print(a)
 #map函数三个字，函传代
 
-# a = map(str, test)
+# a = map, reduce and filter(str, test)
 # a = list(a)
 # print(a)
 
@@ -29,7 +29,7 @@ from functools import reduce
 #     name[0] = name[0].upper()
 #     name = ''.join(name)
 #     return name
-# L2 = list(map(normalize, L1))
+# L2 = list(map, reduce and filter(normalize, L1))
 # print(L2)
 
 #Python提供的sum()函数可以接受一个list并求和，请编写一个prod()函数，可以接受一个list并利用reduce()求积
@@ -49,7 +49,7 @@ from functools import reduce
 #         return 10*x + y
 #     def str2chart(s):
 #         return chart[s]
-#     return reduce(chart2num, map(str2chart, integer)) + reduce(chart2num, map(str2chart, decimal))/(10**len(decimal))
+#     return reduce(chart2num, map, reduce and filter(str2chart, integer)) + reduce(chart2num, map, reduce and filter(str2chart, decimal))/(10**len(decimal))
 # print('str2float(\'123.4567\') =', str2float('123.4567'))
 
 
