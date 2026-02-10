@@ -18,3 +18,4 @@ print(s.name) #由于实例属性优先级比类属性高，因此，它会屏�
 print(student.name) #但是类属性并未消失，用Student.name仍然可以访问
 del s.name
 print(s.name) #即使删除s类的name atr，实例s的attr会去student查找并返回John
+
