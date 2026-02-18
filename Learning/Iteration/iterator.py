@@ -12,6 +12,6 @@ while True:
         x = next(it)
     except StopIteration:
         break
-#9-14 equal to for loop below
+#line 9-14 equal to for loop below
 for x in it:
     pass
