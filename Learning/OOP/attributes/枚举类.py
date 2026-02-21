@@ -20,3 +20,5 @@ print(Weekday.Sun)
 print(Weekday.Sun.value)
 for name, member in Weekday.__members__.items():
     print(member.value, member)
+
+
