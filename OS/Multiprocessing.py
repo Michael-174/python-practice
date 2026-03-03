@@ -8,8 +8,7 @@ def run_proc(name):
 # if __name__ == '__main__':
 #     print(f"Parent process {os.getpid()}")
 #     p = Process(target=run_proc, args=(1,))
-#     print("child process start")
-#     p.start() #子进程开始执行
+#     print("child process start"), p.start() #子进程开始执行
 #     p.join() #让主进程等子进程执行完，执行完再继续
 #     print("child process done")
 
@@ -27,15 +26,15 @@ def long_time_task(name):
     end = time.time()
     print(f"{name} took {(end - start):.2f} seconds") #.2f, 保留两位小数
 
-# if __name__ == '__main__':
-#     print(f"Parent process {os.getpid()} starting")
-#     p = Pool(3)
-#     for i in range(5):
-#         p.apply_async(long_time_task, args=(i,)) #异步提交任务
-#     print("Waiting for all subprocesses done...")
-#     p.close()
-#     p.join()
-#     print("All subprocesses done.")
+if __name__ == '__main__':
+    print(f"Parent process {os.getpid()} starting")
+    p = Pool(3)
+    for i in range(5):
+        p.apply_async(long_time_task, args=(i,)) #异步提交任务
+    print("Waiting for all subprocesses done...")
+    p.close()
+    p.join()
+    print("All subprocesses done.")
 
 ###################################################################
 #subprocess
@@ -48,8 +47,8 @@ import subprocess
 
 # r = subprocess.call("dir", shell=True) #调用cmd，让进程去查dir
 
-print('$ nslookup')
-p = subprocess.Popen(['nslookup'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-output, err = p.communicate(b'set q=mx\npython.org\nexit\n')
-print(output.decode('utf-8'))
-print('Exit code:', p.returncode)
+# print('$ nslookup')
+# p = subprocess.Popen(['nslookup'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+# output, err = p.communicate(b'set q=mx\npython.org\nexit\n')
+# print(output.decode('utf-8'))
+# print('Exit code:', p.returncode)

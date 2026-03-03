@@ -18,11 +18,12 @@ def student2dict(student):
 def dict2student(d):
     return Student(d["name"], d["age"])
 
-s = Student("Michael", 24)
+# s = Student("Michael", 24)
 # print(json.dumps(s, default=student2dict)) #可以用转换函数把类转换成dict
-jstr = json.dumps(s, default = lambda obj: obj.__dict__, indent = 4)
-print(json.loads(jstr, object_hook = dict2student)) #用dict2student反序列化成一个student对象实例
-
+# jstr = json.dumps(s, default = lambda obj: obj.__dict__, indent = 4)
+# print(json.loads(jstr, object_hook = dict2student)) #用dict2student反序列化成一个student对象实例，简而言之是创建了一个实例
+# a = json.loads(jstr, object_hook = dict2student) #命名实例并调用
+# print(a.name)
 
 #########################################################
 class Student1(object):
